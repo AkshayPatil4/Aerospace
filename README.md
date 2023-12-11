@@ -29,7 +29,14 @@ Clone the repository and follow the installation instructions to get the project
    ```bash
    git clone https://github.com/your-username/spectrum-dashboard.git
 
-2. Install dependencies:
-   cd spectrum-dashboard
-npm install
+2. Install dependencies.
+   ```bash
+   npm install
+3. Run the Angular application.
+   ```bash
+   ng serve
+   
+### Accessing the Application
+Open a web browser and go to http://localhost:4200 to use the Spectrum Dahboard.
+
 
