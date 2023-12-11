@@ -1,0 +1,23 @@
+.logo {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.center-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* This ensures the title takes up the available space in the toolbar */
+}
+
+.app-title {
+  font-size: 25px;
+  font-weight: bold;
+
+  color: white;
+  margin: 0;
+}
+
+mat-toolbar {
+  margin-bottom: 1rem;
+}

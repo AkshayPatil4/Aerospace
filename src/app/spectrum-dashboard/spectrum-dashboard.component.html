@@ -1,0 +1,116 @@
+<link
+  rel="stylesheet"
+  href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+/>
+
+<div id="app-container">
+  <div class="dashboard-container">
+    <div class="card-container">
+      <!-- Three cards on the left column -->
+      <div class="dashboard-card">
+        <mat-card-header>
+          <div class="dashboard-card-icon">
+            <i class="uil uil-tachometer-fast"></i>
+          </div>
+          <div class="dashboard-card-title">Velocity</div>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ spectrumData.velocity }} m/s</p>
+        </mat-card-content>
+      </div>
+
+      <div class="dashboard-card">
+        <mat-card-header>
+          <div class="dashboard-card-icon">
+            <i class="uil uil-top-arrow-from-top"></i>
+          </div>
+          <div class="dashboard-card-title">Altitude</div>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ spectrumData.altitude }} meters</p>
+        </mat-card-content>
+      </div>
+
+      <div class="dashboard-card">
+        <mat-card-header>
+          <div class="dashboard-card-icon">
+            <i class="uil uil-temperature-three-quarter"></i>
+          </div>
+          <div class="dashboard-card-title">Temperature</div>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ spectrumData.temperature }} °C</p>
+        </mat-card-content>
+      </div>
+
+      <!-- Three cards on the right column -->
+      <div class="dashboard-card">
+        <mat-card-header>
+          <div class="dashboard-card-icon">
+            <i class="uil uil-file-question-alt"></i>
+          </div>
+          <div class="dashboard-card-title">Status</div>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ spectrumData.status }}</p>
+        </mat-card-content>
+      </div>
+
+      <div class="dashboard-card">
+        <mat-card-header>
+          <div class="dashboard-card-icon">
+            <i class="uil uil-rocket"></i>
+          </div>
+          <div class="dashboard-card-title">Ascending</div>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ spectrumData.ascending ? "Yes" : "No" }}</p>
+        </mat-card-content>
+      </div>
+
+      <div class="dashboard-card">
+        <mat-card-header>
+          <div class="dashboard-card-icon">
+            <i class="uil uil-exclamation-octagon"></i>
+          </div>
+          <div class="dashboard-card-title">Action Required</div>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ spectrumData.actionRequired ? "Yes" : "No" }}</p>
+          <!-- Button to Act on Spectrum -->
+          <button
+            *ngIf="spectrumData.actionRequired"
+            (click)="actOnSpectrum()"
+            class="act-button"
+          >
+            Act on Spectrum
+          </button>
+        </mat-card-content>
+      </div>
+    </div>
+
+    <div class="rocket-container">
+      <img class="rocket-image" [src]="rocketImageUrl" alt="Rocket Image" />
+    </div>
+    <div>
+      <!-- Button to toggle between Live Stream and Normal API Call -->
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="toggleApiMode()"
+        class="update-button"
+      >
+        {{ liveStream ? "Normal API Call" : "Live Stream" }}
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="updateData()"
+        class="update-button"
+        *ngIf="liveStream == false"
+      >
+        Update Data
+      </button>
+    </div>
+  </div>
+</div>
