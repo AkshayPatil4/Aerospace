@@ -7,9 +7,9 @@ Welcome to the Spectrum Dashboard, an Angular application for monitoring rocket 
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Installation](#installation)
+- [Accessing the Application](#accessing-the-application)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Getting Started
 
@@ -38,5 +38,11 @@ Clone the repository and follow the installation instructions to get the project
    
 ### Accessing the Application
 Open a web browser and go to http://localhost:4200 to use the Spectrum Dahboard.
+
+### Usage
+Open the Spectrum Dashboard in your browser.
+Explore the rocket status, velocity, altitude, and temperature.
+Switch between REST API and WebSocket for live streaming.
+Receive notifications for critical status changes and act on Spectrum using the provided button.
 
 
