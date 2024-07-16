@@ -17,7 +17,7 @@ Real-time rocket monitoring and control dashboard built with Angular. Track vita
 
 2. **Installation:**
    ```bash
-   git clone [https://github.com/your-username/spectrum-dashboard.git](https://github.com/your-username/spectrum-dashboard.git)
+   git clone(https://github.com/AkshayPatil4/Aerospace.git)
    cd spectrum-dashboard
    npm install
 
@@ -28,11 +28,12 @@ ng serve
 
 
 The dashboard will be available at http://localhost:4200/ in your browser.
-🌐 Usage
-Access the Dashboard: Open your web browser and navigate to http://localhost:4200/.
-View Rocket Status: Monitor real-time data on the main dashboard.
-Switch Data Source: Toggle between REST API and WebSocket using the provided controls.
-Receive Notifications: Be alerted to critical status changes.
-Take Action: Use the "Act on Spectrum" button to interact with the system (requires API integration).
-⚙️ Configuration (Optional)
-API Endpoint: If you need to customize the API endpoint used for actions or data retrieval, update the configuration settings in the src/environments/environment.ts file.
+## 🌐 Usage
+* Access the Dashboard: Open your web browser and navigate to http://localhost:4200/.
+* View Rocket Status: Monitor real-time data on the main dashboard.
+* Switch Data Source: Toggle between REST API and WebSocket using the provided controls.
+* Receive Notifications: Be alerted to critical status changes.
+* Take Action: Use the "Act on Spectrum" button to interact with the system (requires API integration).
+  
+## ⚙️ Configuration (Optional)
+* API Endpoint: If you need to customize the API endpoint used for actions or data retrieval, update the configuration settings in the src/environments/environment.ts file.
