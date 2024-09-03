@@ -1,0 +1,178 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #0e0e15;
+  color: #ffffff;
+  position: relative;
+}
+
+/* Navbar toggle button styling with Bell Icon */
+.sidenav-toggle-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav-toggle-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.notification-badge {
+  background-color: #ff5252;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* Grid container for the dashboard */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  padding: 20px;
+  flex-grow: 1;
+  grid-template-areas: 
+    "altitude-velocity fuel-oxidizer attitude-visualization"
+    "engine-thrust-temperature external-conditions attitude-visualization"
+    "trajectory-map trajectory-map control-panel";
+}
+
+/* Specific grid item positioning */
+.grid-altitude-velocity {
+  grid-area: altitude-velocity;
+}
+
+.grid-fuel-oxidizer {
+  grid-area: fuel-oxidizer;
+}
+
+.grid-attitude-visualization {
+  grid-area: attitude-visualization;
+}
+
+.grid-engine-thrust-temperature {
+  grid-area: engine-thrust-temperature;
+}
+
+.grid-external-conditions {
+  grid-area: external-conditions;
+}
+
+.grid-trajectory-map {
+  grid-area: trajectory-map;
+}
+
+.grid-control-panel {
+  grid-area: control-panel;
+}
+
+/* Sidenav (Navbar) styling */
+/* Sidenav (Navbar) styling */
+/* Sidenav (Navbar) styling */
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 20rem;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.notifications-list {
+  padding: 1rem;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items properly */
+  background: rgba(255, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.notification-item:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.notification-item mat-icon {
+  float: right;
+  color: #ff5252;
+}
+
+.notification-item span {
+  flex-grow: 1;
+  color: #fff;
+  font-weight: 400;
+}
+
+/* Notification Close Button Styling */
+.close-btn {
+  color: #ffffff;
+  padding: 0;
+  margin-left: 10px;
+  margin-right: -8px; /* Move the button more to the right */
+  transform: scale(0.8); /* Scale down the button size */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff5252; /* Change color on hover */
+  transform: scale(0.9); /* Slightly increase size on hover */
+}
+
+
+/* Responsive adjustments for medium screens */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "altitude-velocity fuel-oxidizer"
+      "engine-thrust-temperature external-conditions"
+      "attitude-visualization attitude-visualization"
+      "trajectory-map control-panel";
+  }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "altitude-velocity"
+      "fuel-oxidizer"
+      "engine-thrust-temperature"
+      "external-conditions"
+      "attitude-visualization"
+      "trajectory-map"
+      "control-panel";
+  }
+}

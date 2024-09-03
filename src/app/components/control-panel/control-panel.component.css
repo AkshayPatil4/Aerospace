@@ -1,0 +1,100 @@
+.control-panel {
+  text-align: center;
+  background: linear-gradient(145deg, #1b1e29, #232736);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(50, 50, 50, 0.2);
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg); /* 3D perspective and rotation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.control-panel:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(15px); /* Enhance 3D effect on hover */
+  box-shadow: 15px 15px 45px rgba(0, 0, 0, 0.8), -15px -15px 30px rgba(50, 50, 50, 0.3);
+}
+
+.control-panel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.control-panel-title {
+  color: #8eb6ed;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 10px rgba(22, 177, 211, 0.8);
+  position: relative;
+  z-index: 1;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.button-group button {
+  flex: 1;
+  margin: 0 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  height: 50px;
+  background: #282c3b;
+  color: #ffffff;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.button-group button:hover {
+  border-color: #29b6f6; /* Default hover border */
+  box-shadow: 0 0 10px #29b6f6;
+}
+
+.button-group button.mat-accent:hover {
+  border-color: #00ff00; /* Green border for Start button */
+  box-shadow: 0 0 10px #00ff00;
+}
+
+.button-group button.mat-warn:hover {
+  border-color: #ff0000; /* Red border for Stop button */
+  box-shadow: 0 0 10px #ff0000;
+}
+
+.control-panel-footer {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.mat-button {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffb300;
+  transition: color 0.3s ease;
+}
+
+.mat-button:hover {
+  color: #ffffff;
+}

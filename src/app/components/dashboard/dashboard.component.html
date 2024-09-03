@@ -1,0 +1,55 @@
+<div class="dashboard-container">
+    <!-- Toggle Button with Bell Icon and Notification Badge -->
+    <button mat-icon-button class="sidenav-toggle-button" (click)="sidenav.toggle()">
+      <mat-icon>notifications</mat-icon>
+      <span class="notification-badge" *ngIf="notifications.length > 0">{{ notifications.length }}</span>
+    </button>
+  
+    <div class="grid-container">
+      <div class="grid-item grid-altitude-velocity">
+        <app-altitude-velocity-chart></app-altitude-velocity-chart>
+      </div>
+      <div class="grid-item grid-fuel-oxidizer">
+        <app-fuel-oxidizer-levels></app-fuel-oxidizer-levels>
+      </div>
+      <div class="grid-item grid-attitude-visualization">
+        <app-attitude-visualization></app-attitude-visualization>
+      </div>
+      <div class="grid-item grid-engine-thrust-temperature">
+        <app-engine-thrust-temperature></app-engine-thrust-temperature>
+      </div>
+      <div class="grid-item grid-external-conditions">
+        <app-external-conditions></app-external-conditions>
+      </div>
+      <div class="grid-item grid-trajectory-map">
+        <app-trajectory-map></app-trajectory-map>
+      </div>
+      <div class="grid-item grid-control-panel">
+        <app-control-panel></app-control-panel>
+      </div>
+    </div>
+    
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #sidenav mode="side" class="sidenav" [opened]="true">
+        <div class="notifications-header">
+          <h3>Notifications</h3>
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+        </div>
+        <div class="notifications-list">
+          <div *ngFor="let notification of notifications; let i = index" class="notification-item">
+            <mat-icon color="warn">warning</mat-icon>
+            <span>{{ notification.message }}</span>
+            <button mat-icon-button class="close-btn" (click)="removeNotification(i)">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-sidenav>
+    
+      <mat-sidenav-content>
+        <!-- The main dashboard grid is here -->
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  

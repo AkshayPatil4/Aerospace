@@ -1,12 +1,14 @@
 const express = require('express');
 const WebSocket = require('ws');
+const cors = require('cors');
+
 const config = require('./config/config');
 const telemetryService = require('./services/telemetryService');
 const routes = require('./routes');
 const logger = require('./utils/logger');
 
 const app = express();
-
+app.use(cors());
 // Middleware
 app.use(express.json());
 
