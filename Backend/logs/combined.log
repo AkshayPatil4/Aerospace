@@ -28,3 +28,6 @@
 {"level":"info","message":"Client disconnected from WebSocket","timestamp":"2024-09-03T20:17:09.333Z"}
 {"level":"info","message":"New client connected to WebSocket","timestamp":"2024-09-03T20:19:13.013Z"}
 {"level":"info","message":"Client disconnected from WebSocket","timestamp":"2024-09-03T20:19:30.847Z"}
+{"level":"info","message":"Server running on http://localhost:3000","timestamp":"2024-09-03T21:18:11.799Z"}
+{"level":"info","message":"New client connected to WebSocket","timestamp":"2024-09-03T21:18:24.184Z"}
+{"level":"info","message":"Client disconnected from WebSocket","timestamp":"2024-09-03T21:18:28.718Z"}
